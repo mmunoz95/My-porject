@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Surprise</title>
+    <style>
+        body {
+            text-align: center;
+            background: #000;
+            color: #fff;
+            font-family: 'Harry Potter', sans-serif;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <audio id="bg-music" src="path-to-nick-cave-o-children.mp3" autoplay loop></audio>
+    <h1>Adri, will you be my Valentine?</h1>
+    <button onclick="handleYes()">Yes</button>
+    <button onclick="handleNo()">No</button>
+
+    <div id="yes-response" class="hidden">
+        <h2>Expecto Patronum!</h2>
+        <img src="path-to-snape-patronus.gif" alt="Patronus">
+        <p>After all this time? Always</p>
+        <img src="path-to-deathly-hallows-symbol.png" alt="Deathly Hallows">
+    </div>
+
+    <div id="no-response" class="hidden">
+        <h2>Confundus!</h2>
+        <p>Remember, we vowed we would be together to the end of times. My life is yours.</p>
+    </div>
+
+    <script>
+        function handleYes() {
+            document.getElementById('yes-response').classList.remove('hidden');
+            document.getElementById('no-response').classList.add('hidden');
+        }
+
+        function handleNo() {
+            document.getElementById('no-response').classList.remove('hidden');
+            document.getElementById('yes-response').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
